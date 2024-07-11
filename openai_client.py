@@ -14,7 +14,7 @@ def get_botanical_response(prompt):
     try:
         response = client.completions.create(model="gpt-3.5-turbo-instruct",
         prompt=prompt,
-        max_tokens=200)
+        max_tokens=300)
         return response.choices[0].text.strip()
     except Exception as e:
         return f"Error: {str(e)}"
